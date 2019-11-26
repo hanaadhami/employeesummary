@@ -1,6 +1,7 @@
 const Intern = require("../lib/Intern");
 
-function Intern (name, id, title, getName, getId, getEmail, getRole, school, getSchool) {
+class Intern {
+  constructor (name, id, title, getName, getId, getEmail, getRole, school, getSchool) {
   this.name = name
   this.id = id
   this.title = title
@@ -10,6 +11,7 @@ function Intern (name, id, title, getName, getId, getEmail, getRole, school, get
   this.getRole = getRole()
   this.school = school
   this.getSchool = getSchool()
+}
 }
 
 test("Can set school via constructor", () => {

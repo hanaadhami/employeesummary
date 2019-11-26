@@ -1,6 +1,7 @@
 const Manager = require("../lib/Manager");
 
-function Manager (name, id, title, getName, getId, getEmail, getRole, officeNumber, getRole) {
+class Manager {
+  constructor (name, id, title, getName, getId, getEmail, getRole, officeNumber, getRole) {
   this.name = name
   this.id = id
   this.title = title
@@ -10,6 +11,7 @@ function Manager (name, id, title, getName, getId, getEmail, getRole, officeNumb
   this.getRole = getRole()
   this.officeNumber = officeNumber
   this.getRole = getRole
+}
 }
 
 test("Can set office number via constructor argument", () => {

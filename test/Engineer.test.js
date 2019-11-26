@@ -1,6 +1,7 @@
 const Engineer = require("../lib/Engineer");
 
-function Engineer (name, id, title, getName, getId, getEmail, getRole, github, getGithub) {
+class Engineer {
+  constructor (name, id, title, getName, getId, getEmail, getRole, github, getGithub) {
   this.name = name
   this.id = id
   this.title = title
@@ -10,6 +11,7 @@ function Engineer (name, id, title, getName, getId, getEmail, getRole, github, g
   this.getRole = getRole()
   this.github = github
   this.getGithub = getGithub()
+}
 }
 
 test("Can set GitHUb account via constructor", () => {
