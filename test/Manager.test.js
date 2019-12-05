@@ -1,18 +1,6 @@
 const Manager = require("../lib/Manager");
 
-class Manager {
-  constructor (name, id, title, getName, getId, getEmail, getRole, officeNumber, getRole) {
-  this.name = name
-  this.id = id
-  this.title = title
-  this.getName = getName()
-  this.getId = getId()
-  this.getEmail = getEmail()
-  this.getRole = getRole()
-  this.officeNumber = officeNumber
-  this.getRole = getRole
-}
-}
+
 
 test("Can set office number via constructor argument", () => {
   const testValue = 100;
