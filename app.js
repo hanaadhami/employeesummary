@@ -4,27 +4,6 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 
-class Begin {
-    begin() {
-        inquirer
-        .prompt([
-            {
-                type: 'list',
-                name: 'who',
-                message: "What role are you in the company?",
-                choices: [
-                    "Employee",
-                    "Engineer",
-                    "Intern",
-                    "Manager"
-                ]
-
-            }            
-        ])
-    }
-}
-
-console.log(Begin);
 
 function askEmployeeQuestions() {
     inquirer
@@ -48,7 +27,18 @@ function askEmployeeQuestions() {
             type: 'input',
             name: 'email',
             message: "What is your email?"
-        },
+        },        
+        {
+            type: 'list',
+            name: 'who',
+            message: "What role are you in the company?",
+            choices: [
+                "Employee",
+                "Engineer",
+                "Intern",
+                "Manager"
+            ]
+        }
     ]
 
     ).then(answers => {
