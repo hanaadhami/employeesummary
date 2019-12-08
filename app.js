@@ -1,5 +1,31 @@
 const inquirer = require("inquirer");
-const Employee = require("./lib/Employee")
+const Employee = require("./lib/Employee");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
+const Manager = require("./lib/Manager");
+
+class Begin {
+    begin() {
+        inquirer
+        .prompt([
+            {
+                type: 'list',
+                name: 'who',
+                message: "What role are you in the company?",
+                choices: [
+                    "Employee",
+                    "Engineer",
+                    "Intern",
+                    "Manager"
+                ]
+
+            }            
+        ])
+    }
+}
+
+const begin = new Begin();
+begin.play();
 
 function askEmployeeQuestions() {
     inquirer
@@ -133,3 +159,5 @@ function askManagerQuestions() {
         var manager = new Manager(answers.name, 1, answers.title, answers.email, answers.role, answers.officeNumber)
     })
 }
+
+
