@@ -24,8 +24,7 @@ class Begin {
     }
 }
 
-const begin = new Begin();
-begin.play();
+console.log(Begin);
 
 function askEmployeeQuestions() {
     inquirer
@@ -56,6 +55,8 @@ function askEmployeeQuestions() {
         var employee = new Employee(answers.name, 1, answers.title, answers.email)     
     })
 }
+
+console.log(askEmployeeQuestions());
 
 function askEngineerQuestions() {
     inquirer
