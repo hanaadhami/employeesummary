@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "buildpack": "0.0.1",
+    "heroku": "^7.35.0",
     "inquirer": "^6.2.1"
   },
   "devDependencies": {

@@ -40,13 +40,14 @@ function askEmployeeQuestions() {
             ]
         }
     ]
-
     ).then(answers => {
         var employee = new Employee(answers.name, 1, answers.title, answers.email)     
     })
 }
 
-console.log(askEmployeeQuestions());
+askEmployeeQuestions();
+
+
 
 function askEngineerQuestions() {
     inquirer
